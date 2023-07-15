@@ -1,29 +1,27 @@
-# 👋 Welcome to A Product
-
-{% hint style="info" %}
-**GitBook tip:** your product docs aren't just a reference of all your features! use them to encourage folks to perform certain actions and discover the value in your product.
-{% endhint %}
+# 👋 README
 
 ## Overview
 
-Here are a couple of example overviews from products with really great docs:
+写这本书的主要动机：
 
-> Loom is a video messaging tool that helps you get your message across through instantly shareable videos.
->
-> With Loom, you can record your camera, microphone, and desktop simultaneously. Your video is then instantly available to share through Loom's patented technology.
->
-> — From the [Loom Docs](https://support.loom.com/hc/en-us/articles/360002158057-What-is-Loom-)
+1. 学习算法
+2. 保持编程思维的活跃度
+3. 提高知识输出能力
 
-> The Mailchimp Marketing API provides programmatic access to Mailchimp data and functionality, allowing developers to build custom features to do things like sync email activity and campaign analytics with their database, manage audiences and campaigns, and more.
->
-> — From the [Mailchimp Marketing API docs](https://mailchimp.com/developer/marketing/docs/fundamentals/)
+参考书籍为
 
-## Quick links
+1. 康奈尔大学教材——`Alogrithm Design`
+2. 代码随想录
+3. 剑指Offer
+4. 数据结构（邓俊辉版）
+5. 数据结构与算法分析——Java语言描述
 
-{% content-ref url="overview/what-we-do.md" %}
-[what-we-do.md](overview/what-we-do.md)
-{% endcontent-ref %}
+编写内容主要围绕书中的五个基本问题：
 
-{% content-ref url="overview/our-features.md" %}
-[our-features.md](overview/our-features.md)
-{% endcontent-ref %}
+1. 区间调度（贪心）
+2. 加权区间调度（动态规划）
+3. 二分匹配（网络流）
+4. 独立集（NP完全）
+5. 竞争设施位置（PSPACE）
+
+编程语言主要采用`java`。

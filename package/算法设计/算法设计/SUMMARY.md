@@ -1,29 +1,26 @@
 # Table of contents
 
-* [👋 Welcome to A Product](README.md)
+* [👋 README](README.md)
 
 ## Overview
 
 * [💡 What we do](overview/what-we-do.md)
-* [✨ Our Features](overview/our-features.md)
 
-## Product Guides
+## SORT
 
-* [📪 Making a post](product-guides/making-a-post.md)
-* [📎 Understanding Projects](product-guides/understanding-projects.md)
+* [排序中的常见方法](sort/pai-xu-zhong-de-chang-jian-fang-fa.md)
 
-## Fundamentals
+## graph
 
-* [🛠 Getting set up](fundamentals/getting-set-up/README.md)
-  * [📝 Setting permissions](fundamentals/getting-set-up/setting-permissions.md)
-  * [🧑 Inviting Members](fundamentals/getting-set-up/inviting-members.md)
+* [❤ 图的遍历](graph/understanding-projects.md)
+
+## Greedy
+
+* [🛠 Getting set up](greedy/getting-set-up/README.md)
+  * [📝 Setting permissions](greedy/getting-set-up/setting-permissions.md)
+  * [🧑 Inviting Members](greedy/getting-set-up/inviting-members.md)
 
 ## Use Cases
 
 * [🎨 For Designers](use-cases/for-designers.md)
 * [🖥 For Developers](use-cases/for-developers.md)
-
-***
-
-* [2023 07 02 技术分享 Spring工具类](2023-07-02-ji-shu-fen-xiang-spring-gong-ju-lei.md)
-* [2023 07 15 GitBook搭建](2023-07-15-gitbook-da-jian.md)
