@@ -40,7 +40,8 @@ public interface Comparable<T> {
 
 ```java
 public class SortTest {
-    private static final Comparator<int[]> COMPARATOR = (o1, o2) -> {
+    // 优化前
+    private static final Comparator<int[]> COMPARATOR1 = (o1, o2) -> {
         if (o1[0] != o2[0]) {
             return o1[0] - o2[0];
         }
@@ -49,6 +50,12 @@ public class SortTest {
         }
         return Integer.compare(o1[1], o2[1]);
     };
+    
+    // 优化后，注意这里的类型推断
+    private static final Comparator<int[]> COMPARATOR2 = Comparator
+            .comparingInt((int[] ls1) -> ls1[0])
+            .thenComparing((int[] ls2) -> ls2[2], Comparator.reverseOrder())
+            .thenComparingInt((int[] ls3) -> ls3[1]);
 
     @Test
     void testArraySort() {
@@ -57,7 +64,7 @@ public class SortTest {
         array[1] = new int[]{6, 8, 3};
         array[2] = new int[]{6, 9, 10};
         array[3] = new int[]{6, 8, 10};
-        Arrays.sort(array, COMPARATOR);
+        Arrays.sort(array, COMPARATOR2);
         for (int[] ls : array) {
             System.out.println(Arrays.toString(ls));
         }
@@ -67,7 +74,9 @@ public class SortTest {
 
 #### 1.1.3 NOTE
 
-`Arrays.asList()`方法返回的List是长度不可变的，若违反则抛出异常：（如：`UnsupportedOperationException at java.util.AbstractList.add`）
+* `Arrays.asList()`方法返回的List是长度不可变的，若违反则抛出异常：（如：`UnsupportedOperationException at java.util.AbstractList.add`）
+* 使用`comparing`和`thenComparing`方法时注意类型推断
+* 不要使用reverse方法
 
 ## 2. Comparator比较器
 
@@ -93,7 +102,7 @@ public class SortTest {
 
 #### 2.2.3 reversed
 
-对排序进行反转。
+对排序进行反转，不推荐使用。
 
 #### 2.2.4 thenComparingXxx
 
