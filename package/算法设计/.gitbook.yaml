@@ -1,0 +1,5 @@
+root: ./算法设计/
+
+structure:
+  readme: README.md
+  summary: SUMMARY.md
