@@ -19,7 +19,7 @@
 
 * [🛠 区间调度问题](greedy/getting-set-up/README.md)
   * [📝 区间调度](greedy/getting-set-up/setting-permissions.md)
-  * [🧑 Inviting Members](greedy/getting-set-up/inviting-members.md)
+  * [🦽 区间划分](greedy/getting-set-up/inviting-members.md)
 
 ## Use Cases
 

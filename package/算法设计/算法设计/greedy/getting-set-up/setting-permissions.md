@@ -4,9 +4,11 @@ description: Interval Scheduling
 
 # 📝 区间调度
 
+> 区间调度问题是基于时间片的多个请求去申请单个资源的调度问题。
+
 ## 题目描述
 
-给你很多形如 `[start, end)` 的区间，请你设计一个算法，算出这些区间中最多有几个互不相交的区间。
+给你很多形如 `[start, end]` 的区间，请你设计一个算法，算出这些区间中最多有几个互不相交的区间。
 
 ```java
 int intervalSchedule(int[][] intvs) {
@@ -33,8 +35,8 @@ int intervalSchedule(int[][] intvs) {
         return 0;
     }
     Arrays.sort(intvs, COMPARATOR);
-    int total = 1; // 最大相容区间数
-    int currentEndPoint = intvs[0][1]; // 当前相容集最大结束时间点
+    int total = 0; // 最大相容区间数
+    int currentEndPoint = Integer.MIN_VALUE; // 当前相容集最大结束时间点
     for (int[] interval : intvs) {
         if (interval[0] >= currentEndPoint) { // 相容
             total++;
