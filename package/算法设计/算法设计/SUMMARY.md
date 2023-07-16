@@ -17,8 +17,8 @@
 
 ## Greedy
 
-* [🛠 Getting set up](greedy/getting-set-up/README.md)
-  * [📝 Setting permissions](greedy/getting-set-up/setting-permissions.md)
+* [🛠 区间调度问题](greedy/getting-set-up/README.md)
+  * [📝 区间调度](greedy/getting-set-up/setting-permissions.md)
   * [🧑 Inviting Members](greedy/getting-set-up/inviting-members.md)
 
 ## Use Cases
