@@ -24,10 +24,10 @@ public int intervalPartitioning(int[][] intvs) {
 
 ## 解题思路
 
-1. 按结束时间升序排列
+1. 按开始时间升序排列
 2. 第一个区间占用第一个资源
-3. 维护资源数`total`，维护一个资源数组`resources`，存放每个相容集的最大结束时间
-4. 对余下的区间逐个判断，若找到与之相容的（且结束时间尽可能大的）资源，则放入
+3. 维护一个存储资源的优先级队列`resources`，存放每个相容集
+4. 对余下的区间逐个判断，若找到与之相容的（且结束时间最小的）资源，则放入
 5. 没有的话，就另外创资源
 
 ## 算法实现
@@ -58,20 +58,26 @@ return d
 
 <summary>java语言描述</summary>
 
-<pre class="language-java" data-overflow="wrap"><code class="lang-java">private static final Comparator&#x3C;int[]> COMPARATOR = Comparator.comparingInt(ls -> ls[1]);
+{% code overflow="wrap" %}
+```java
+private static final Comparator<int[]> COMPARATOR = Comparator.comparingInt(ls -> ls[0]);
 
-public int intervalPartitioning(int[][] intvs) {
-<strong>    if (intvs == null || intvs.length == 0) {
-</strong>        return 0;
+public int intervalPartition(int[][] intvs) {
+    if (intvs == null || intvs.length == 0) {
+        return 0;
     }
     Arrays.sort(intvs, COMPARATOR);
-    int total = 1;
-    List&#x3C;Integer> resources = Stream.of(intvs[0][1]).collect(Collectors.toList());
-    for (int i = 1; i &#x3C; intvs.length; i++) {
-
+    Queue<Integer> resources = new PriorityQueue<>();
+    resources.add(intvs[0][1]);
+    for (int i = 1; i < intvs.length; i++) {
+        if (intvs[i][0] >= resources.element()) {
+            resources.remove();
+        }
+        resources.add(intvs[i][1]);
     }
-    return total;
+    return resources.size();
 }
-</code></pre>
+```
+{% endcode %}
 
 </details>
